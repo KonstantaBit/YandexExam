@@ -6,116 +6,162 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-
-    </style>
 
 </head>
 <body>
 <main>
-    <div class="b-example-divider"></div>
-    <div class="container col-xxl-9 px-4 py-5">
-        <div class="row row-cols-1">
-            <div class="col row-cols-1 row-cols-xxl-2">
-                <h1 class="display-3 fw-bold lh-1 mb-3">Привет!</h1>
-                <h1 class="display-5 fw lh-1 mb-3">Меня зовут Костя, это я:</h1>
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                     role="img"><title>Bootstrap</title></svg>
+                <span class="fs-4">Спецально для "Яндекс Интенсивы"</span>
+            </a>
+        </header>
+
+        <div class="p-5 mb-4 bg-light border border-warning rounded-3">
+            <div class="row">
+                <div class="col container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Привет !</h1>
+                    <p class="col-md-8 fs-4">Меня зовут Константин, живу в городе Москва, я уже прошел двухлетний курс
+                        Яндекс лицея и имел опыт работы с Django. Поступая на этот курс, я хотел бы отточить свои навыки
+                        работы с вебом, а именно backend.</p>
+                </div>
+                <img src="{% static 'mainpage/Kostya-1.jpg' %}" class="col rounded-circle" width="100%" height="100%">
             </div>
-            <div class="col">
-                <div class="row row-cols-1 row-cols-xxl-3 g-1">
-                    <div class="col">
-                        <div class="card shadow h-80 rounded-4" style="width: 18rem;">
-                            <img src="{% static 'mainpage/Kostya-1.jpg' %}"
-                                 class="d-block mx-lg-auto img-fluid rounded-4"
-                                 loading="lazy">
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6 py-2">
+                <div class="h-100 p-5 text-white bg-dark rounded-3">
+                    <h2>Я нормальный, просто так получилось...</h2>
+                    <p>Смотрю аниме, иногда читаю мангу или ранобэ, но без фанатизма</p>
+                    <img src="{% static 'mainpage/anime.jpg' %}" class="rounded-3" width="100%">
+                </div>
+            </div>
+            <div class="col-md-6 py-2">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Без него я бы здесь не был</h2>
+                    <p>Программирование... Люблю программировать, делать чистый и красивый код. Покупаю и читаю книги на
+                        эту тему.Часто разрабатываю пэт-проекты для себя,
+                        например, сейчас учу Rust с OpenGL для создания одной игры. P.S. не занимаюсь гейм-девом</p>
+                    <img src="{% static 'mainpage/programing.jpg' %}" class="rounded-3" width="100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6 py-2">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Компьютерные игры</h2>
+                    <p>Люблю командные игры, поэтому софт-скиллы у меня более-менее есть</p>
+                    <img src="{% static 'mainpage/gaming.jpg' %}" class="rounded-3" width="100%">
+                    <p>Когда-то запускал сервера на компьютере, скрипткидил и писал модификации для игр</p>
+                    <img src="{% static 'mainpage/gaming-2.jpg' %}" class="rounded-3" width="100%">
+                    <p></p>
+                    <img src="{% static 'mainpage/pet-1.jpg' %}" class="rounded-3" width="100%">
+                </div>
+            </div>
+            <div class="col-md-6 py-2">
+                <div class="h-100 p-5 text-white bg-dark rounded-3">
+                    <h2>Иногда шутеры уже не впечатляют...</h2>
+                    <p> Этим летом решил заняться страйкболом, иногда хожу с друзьями на воскресные игры, такое сильно
+                        сближает с коллективом)</p>
+                    <img src="{% static 'mainpage/strikeball.jpg' %}" class="rounded-3" width="100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="p-5 mb-4 bg-light border border-warning rounded-3">
+            <h1 class="display-5 fw-bold">Мой опыт:</h1>
+            <p class="fs-4">Python - 4 года, два из которых Яндекс лицей. Самостоятельно изучал Django, пытался
+                в нейросети (TensorFlow)</p>
+            <p class="fs-4">HTML и CSS - менее года, изучал Bootstrap</p>
+            <p class="fs-4">С++ - 1 год активного использовния, учил для олимпиад по информатике</p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Проект социальной поддержки волонтеров
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Я с другом в прошлом учебном году учавствовал в городском конкурсе, как раз делали проект
+                                на Django. Проект заключается во взаимодействии волонтеров и государства. Хостили на
+                                heroku. Это был мой первый проект на Django.</p>
+                            <img src="{% static 'mainpage/project-3.jpg' %}" class="rounded-3" width="100%">
+                            <p>Несмотря, на нашу неопытность, мы заняли призерство на том конкурсе, его Бауманка
+                                проводила</p>
+                            <img src="{% static 'mainpage/Kostya-4.jpg' %}" class="rounded-3" width="100%">
+                            <a href="https://github.com/InferusAnima/SocialSystem">Ссылка на гитхабе</a>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow h-80 rounded-4" style="width: 18rem;">
-                            <img src="{% static 'mainpage/Kostya-2.jpg' %}"
-                                 class="d-block mx-lg-auto img-fluid rounded-4"
-                                 loading="lazy">
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Яндекс Лицей. Проект на Flask
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                Копия ютуба, добавить нечего, вышло не особо удачно, но я получил ценный опыт.
+                                <img src="{% static 'mainpage/project-2.jpg' %}" class="rounded-3" width="100%">
+                                <a href="https://github.com/KonstantaBit/CloneTube">Ссылка на гитхабе</a>
+                            </p>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow h-100 rounded-4" style="width: 18rem;">
-                            <img src="{% static 'mainpage/Kostya-3.jpg' %}"
-                                 class="d-block mx-lg-auto img-fluid rounded-4"
-                                 loading="lazy">
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Яндекс Лицей. Проект на Pygame
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Это был мой одиночный проект. Как я люблю делать самписные движки... правда пайтон не
+                                смог выдержать функцию рейкаста и пришлось подключать numba. Опять же ценный опыт</p>
+                            <img src="{% static 'mainpage/project-1.jpg' %}" class="rounded-3" width="100%">
+                            <a href="https://github.com/KonstantaBit/Pygame_project_for_Yandex">Ссылка на гитхабе</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Пэт-проекты. Раняя деятельность
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h2>Пробежимся по совсем ранней моей деятельности</h2>
+                            <p>РПГ Бот в ВК</p>
+                            <img src="{% static 'mainpage/pet-4.jpg' %}" class="rounded-3" width="100%">
+                            <p>Doom по туторам с ютуба</p>
+                            <img src="{% static 'mainpage/pet-2.jpg' %}" class="rounded-3" width="100%">
+                            <p>Симуляция электронов вокруг ядра атома по системе Бора</p>
+                            <img src="{% static 'mainpage/pet-3.jpg' %}" class="rounded-3" width="100%">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="b-example-divider"></div>
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="{% static 'mainpage/moscow.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                     loading="lazy" width="700" height="500">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Мой родной город:</h1>
-                <p class="lead">Я живу в городе Москва, на оранжевой ветке</p>
-            </div>
-        </div>
-    </div>
-    <div class="b-example-divider"></div>
-    <div class="container col-xxl-8 px-4 py-5">
-        <h2 class="pb-2 border-bottom">Я увлекаюсь:</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-4 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="card card-cover  overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                     style="background-image: url('static/mainpage/gaming.jpg'); height: 36rem; width: 18rem;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">Играю в хардкорные стратегии и песочницы</h3>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                     style="background-image: url('static/mainpage/programing.jpg'); height: 36rem; width: 18rem;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-9 lh-1 fw-bold">Иногда развлекаюсь проектами, сейчас пишу игру на Rust</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                     style="background-image: url('static/mainpage/anime.jpg'); height: 36rem; width: 18rem;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-9 lh-1 fw-bold">Смотрю аниме, иногда читаю мангу или ранобэ</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                     style="background-image: url('static/mainpage/strikeball.jpg'); height: 36rem; width: 18rem;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <footer class="pt-3 mt-4 text-muted border-top">
+            © 2021
+        </footer>
     </div>
-    <div class="b-example-divider"></div>
-    <div class="container col-xxl-8 px-4 py-5">
-    </div>
-    <div class="b-example-divider"></div>
 </main>
 <footer>
 
