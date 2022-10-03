@@ -1,4 +1,4 @@
-# Как развернуть и запусть данный проект:
+# Как развернуть и запустить данный проект:
 1. Установить python версии 3.8+ с https://www.python.org/downloads/
 2. Установить git с https://gitforwindows.org/
 3. Открыть CMD и ввести: "git clone https://github.com/KonstantaBit/YandexExam"
